@@ -1,50 +1,18 @@
 <html>
 <head>
 <style>
-body {
-  background: linear-gradient(to bottom, #ffd6e8, #fff);
-  overflow-x: hidden;
-  font-family: 'Comic Sans MS', cursive;
-}
+<script 
+function checkPassword() {
+var pass = document.getElementById("password").value.trim();
 
-/* floating hearts */
-.heart {
-  position: fixed;
-  bottom: -20px;
-  font-size: 24px;
-  animation: floatUp 6s linear infinite;
+  if (pass === "guddu") {   // yahan apna password
+    window.location.href = "index.html"; 
+  } else {
+    alert("Galat password hai meri jaan ❤️");
+  }
 }
-
-@keyframes floatUp {
-  from { transform: translateY(0); opacity: 1; }
-  to { transform: translateY(-100vh); opacity: 0; }
-}
-
-/* teddy */
-.teddy {
-  width: 120px;
-  animation: bounce 2s infinite;
-}
-
-@keyframes bounce {
-  0%,100% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
-}
-
-/* gift box */
-.gift {
-  font-size: 120px;
-  cursor: pointer;
-  animation: shake 1s infinite;
-}
-
-@keyframes shake {
-  0% { transform: rotate(0); }
-  25% { transform: rotate(5deg); }
-  50% { transform: rotate(-5deg); }
-  75% { transform: rotate(5deg); }
-}
-</style>
+</script>
+<style>
 <meta charset="UTF-8">
 <title>For My Guddu ❤️</title>
 
@@ -96,9 +64,9 @@ p{
 <div class="box" id="lock">
   <h2>🔐 Private Website</h2>
   <p>Password daalo Meri jaan ❤️</p>
-  <input type="password" id="pass">
+  <input type="password" placeholder="Enter password">
   <br><br>
-  <button onclick="check()">Enter</button>
+  <button type="button" onclick="checkPassword()">Enter</button>
 </div>
 
 <!-- STEP 1 -->
